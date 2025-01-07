@@ -37,6 +37,51 @@
 
   <div class="container" style="margin-left: 30px">
     <h1>Halaman Mahasiswa</h1>
+
+    {{-- 
+      ROWSPAN = untuk menggabungkan baris
+      COLSPAN = untuk menggabungkan kolom
+      --}}
+
+    <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Jenis Kelamin</th>
+          <th colspan="2">TTL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0702223160</td>
+          <td>Rani Anjelina Ritonga</td>
+          <td>Perempuan</td>
+          <td>13-01-2005</td>
+          <td rowspan="2">Rantauprapat</td>
+        </tr>
+        <tr>
+          <td>0702221042</td>
+          <td>Rani Ramadhani</td>
+          <td>Perempuan</td>
+          <td>04-02-2004</td>
+        </tr>
+        <tr>
+          <td>0702223164</td>
+          <td>Asni Rahma Yanti</td>
+          <td>Perempuan</td>
+          <td>16-08-2003</td>
+          <td>Medan</td>
+        </tr>
+        <tr>
+          <td>0702221045</td>
+          <td>Citra Ramadhani</td>
+          <td>Perempuan</td>
+          <td>06-11-2004</td>
+          <td>Perdagangan </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
