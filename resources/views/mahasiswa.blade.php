@@ -53,21 +53,15 @@
         </tr>
       </thead>
       <tbody>
-        <?php $nilai_awal = 0; ?>
-
-        @while ($nilai_awal < $jumlah)
-         
+       
+        @for ($i = 0; $i < $jumlah; $i++)
         <tr>
-          <td>{{$nim [$nilai_awal]}}</td>
-          <td>{{$nama [$nilai_awal]}}</td>
+          <td>{{$nim [$i] }}</td>  
+          <td>{{$nama [$i] }}</td> 
           <td>Perempuan</td>
-          <td>13-01-2005</td>
-          <td>Rantauprapat</td>
-        </tr>
-
-        <?php $nilai_awal++ ?>
-        @endwhile
-
+          <td>Rantauprapat</td> 
+        </tr>    
+        @endfor
 
         </tr>
       </tbody>
