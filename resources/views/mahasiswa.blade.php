@@ -38,34 +38,73 @@
   <div class="container" style="margin-left: 30px">
     <h1>Halaman Mahasiswa</h1>
 
-    {{-- 
-      ROWSPAN = untuk menggabungkan baris
-      COLSPAN = untuk menggabungkan kolom
-      --}}
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Tabel Mahasiswa</h4>
+        <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
+          <thead>
+            <tr>
+              <th>NIM</th>
+              <th>Nama Mahasiswa</th>
+              <th>Jenis Kelamin</th>
+              <th colspan="2">TTL</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+            @for ($i = 0; $i < $jumlah; $i++)
+            <tr>
+              <td>{{$nim [$i] }}</td>  
+              <td>{{$nama [$i] }}</td> 
+              <td>Perempuan</td>
+              <td>Rantauprapat</td> 
+            </tr>    
+            @endfor
+            </tr>
+          </tbody>
+        </table>
 
-    <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
-      <thead>
-        <tr>
-          <th>NIM</th>
-          <th>Nama Mahasiswa</th>
-          <th>Jenis Kelamin</th>
-          <th colspan="2">TTL</th>
-        </tr>
-      </thead>
-      <tbody>
-       
-        @for ($i = 0; $i < $jumlah; $i++)
-        <tr>
-          <td>{{$nim [$i] }}</td>  
-          <td>{{$nama [$i] }}</td> 
-          <td>Perempuan</td>
-          <td>Rantauprapat</td> 
-        </tr>    
-        @endfor
+      </div>
+      <div class="col-sm-6">
+        <h4>Form Mahasiswa</h4>
+        <form action="" method="GET">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="">NIM</label>
+              <input type="number" name="nim" class="form-control" placeholder="Input NIM">
+            </div>
+            <div class="col-sm-6">
+              <label for="">Nama Mahasiswa</label>
+              <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Input Nama Mahasiswa">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="">Tanggal Lahir</label>
+              <input type="date" name="tgl_lahir" class="form-control">
+            </div>
+            <div class="col-sm-6">
+              <label for="">Prodi</label>
+              <select name="prodi" class="form-control">
+                <option >Sistem Informasi</option>
+                <option >Ilmu Komputer</option>
+                <option >Matematika</option>
+                <option >Fisika</option>
+                <option >Biologi</option>
+              </select>
+            </div>
+          </div>
 
-        </tr>
-      </tbody>
-    </table>
+          <div class="row mt-2">
+            <div class="col-sm-12">
+              <button class="btn btn-primary" style="width: 100%" type="submit">SIMPAN</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div> 
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
