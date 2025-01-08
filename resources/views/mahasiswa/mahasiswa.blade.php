@@ -41,7 +41,15 @@
     <div class="row">
       <div class="col-sm-6">
         <h4>Tabel Mahasiswa</h4>
-        <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
+      </div>
+      <div class="col-sm-6" style="text-align: right">
+        <a href="/mahasiswa/create" class="btn btn-info btn-sm ">Tambah Mahasiswa</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-danger table-sm table-hover table-striped table-bordered text-center ">
           <thead>
             <tr>
               <th>NIM</th>
@@ -55,47 +63,6 @@
           
           </tbody>
         </table>
-
-      </div>
-      <div class="col-sm-6">
-        <h4>Form Mahasiswa</h4>
-        <form action="" method="GET">
-          <div class="row">
-            <div class="col-sm-6">
-              <label for="">NIM</label>
-              <input type="number" name="nim" class="form-control" placeholder="Input NIM">
-            </div>
-            <div class="col-sm-6">
-              <label for="">Nama Mahasiswa</label>
-              <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Input Nama Mahasiswa">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <label for="">Tanggal Lahir</label>
-              <input type="date" name="tgl_lahir" class="form-control">
-            </div>
-            <div class="col-sm-6">
-              <label for="">Prodi</label>
-              <select name="prodi" class="form-control">
-                <option >Sistem Informasi</option>
-                <option >Ilmu Komputer</option>
-                <option >Matematika</option>
-                <option >Fisika</option>
-                <option >Biologi</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="row mt-2">
-            <div class="col-sm-12">
-              <button class="btn btn-primary" style="width: 100%" type="submit">SIMPAN</button>
-            </div>
-          </div>
-
-        </form>
-
-      </div>
     </div> 
   </div>
 
